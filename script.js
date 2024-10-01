@@ -1,17 +1,22 @@
-// Wait for the document to load
+// Wait for the document to fully load
 document.addEventListener("DOMContentLoaded", function() {
-    // Select the buttons for Data Analytics Fundamentals and SQL
-    var analyticsBtn = document.getElementById("analytics-btn");
-    var sqlBtn = document.getElementById("sql-btn");
+    // Select the "Enroll Now" buttons by ID
+    var enrollAnalytics = document.getElementById("enroll-analytics");
+    var enrollSQL = document.getElementById("enroll-sql");
 
-    // Add click event listeners to show the "Coming Soon" message
-    analyticsBtn.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default link behavior
-        alert("Data Analytics Fundamentals course is coming soon! We are currently looking for instructors.");
-    });
+    // Add click event listener for Data Analytics
+    if (enrollAnalytics) {
+        enrollAnalytics.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            alert("The Data Analytics Fundamentals course is coming soon! We are currently looking for instructors.");
+        });
+    }
 
-    sqlBtn.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default link behavior
-        alert("SQL for Data Management course is coming soon! We are currently looking for instructors.");
-    });
+    // Add click event listener for SQL for Data Management
+    if (enrollSQL) {
+        enrollSQL.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            alert("The SQL for Data Management course is coming soon! We are currently looking for instructors.");
+        });
+    }
 });
