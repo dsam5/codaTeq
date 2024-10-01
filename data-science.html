@@ -6,6 +6,75 @@
     <title>Data Science Mastery - codaTeq</title>
     <link rel="stylesheet" href="styles1.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Additional styling */
+        .instructor {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 30px 0;
+            gap: 20px;
+        }
+
+        .instructor img {
+            width: 150px;
+            height: 150;
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: contain;
+        }
+
+        .instructor-content {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e55039;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #d84315;
+        }
+
+        #instructor-details {
+            padding: 20px 0;
+            display: none; /* Hidden by default */
+            text-align: left;
+        }
+
+        blockquote {
+            font-style: italic;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-left: 5px solid #e55039;
+            margin: 20px 0;
+        }
+
+        /* Styling for larger screens */
+        @media (min-width: 768px) {
+            .instructor {
+                flex-direction: row;
+            }
+        }
+
+        /* Styling for smaller screens */
+        @media (max-width: 768px) {
+            .instructor {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta-btn {
+                margin-top: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -25,18 +94,63 @@
         </nav>
     </header>
 
-    <!-- Course Details Section -->
+    <!-- Course Overview Section -->
     <section class="course-details">
         <h1>Data Science Mastery</h1>
-        <p>Deep dive into machine learning, Python, and R to become a data science expert. Solve complex problems, build models, and gain expertise in data science techniques.</p>
-        
-        <h2>Requirements</h2>
+        <p>This comprehensive course offers a deep dive into data science, covering essential topics such as Python, machine learning algorithms, data wrangling, and statistical analysis. By the end of the course, you will be equipped with the skills to build predictive models, solve complex data problems, and use data to make informed decisions in any industry.</p>
+
+        <!-- What You'll Learn Section -->
+        <h2>What You'll Learn</h2>
         <ul>
-            <li>Basic programming knowledge (Python preferred)</li>
-            <li>Familiarity with statistics and probability</li>
-            <li>A computer with internet access</li>
+            <li>Python programming for data science</li>
+            <li>Exploratory data analysis and data visualization</li>
+            <li>Machine learning techniques (e.g., classification, regression, clustering)</li>
+            <li>Model evaluation and optimization</li>
+            <li>Big data processing with tools like Pandas, NumPy, and Scikit-learn</li>
+            <li>Real-world projects and case studies</li>
         </ul>
 
+        <!-- Requirements Section -->
+        <h2>Requirements</h2>
+        <ul>
+            <li>Basic understanding of Python (or willingness to learn)</li>
+            <li>Familiarity with statistics and basic mathematics</li>
+            <li>Laptop with at least 8GB RAM (recommended)</li>
+            <li>No prior data science experience required</li>
+        </ul>
+
+        <!-- Instructor Section with Learn More Functionality -->
+        <h2>Meet Your Instructor</h2>
+        <div class="instructor">
+            <img src="team1.jpg" alt="Nana Amissah Amoah">
+            <div class="instructor-content">
+                <p><strong>Nana Amissah Amoah</strong> is a skilled Data Scientist with extensive experience across industries like healthcare, finance, and retail.</p>
+                <a href="#" id="learn-more-btn" class="cta-btn">Learn More</a>
+                <div id="instructor-details">
+                    <p>Nana specializes in developing predictive models, conducting in-depth data analysis using Python, and creating advanced NLP-based chatbots to enhance user experiences.</p>
+                    <p>Passionate about education and mentorship, Nana has empowered many students to master data science and AI, guiding them through complex concepts with ease. His focus is on staying up-to-date with the latest AI advancements and leveraging these technologies to drive innovation and business impact.</p>
+
+                    <h3>Instructor Highlights</h3>
+                    <ul>
+                        <li>Former Data Science Instructor at Home Skool Academy</li>
+                        <li>Regular speaker at international AI and ML conferences</li>
+                        <li>Dedicated to hands-on learning and mentorship</li>
+                    </ul>
+
+                    <!-- Contact Details -->
+                    <h3>Contact Details</h3>
+                    <p><strong>Email:</strong> nanaamoah776@gmail.com</p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nana-amoah">Nana (Amissah) Amoah</a></p>
+                    <p><strong>Phone:</strong> 0505884057 / 0506506443</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial Section -->
+        <h2>What Our Students Say</h2>
+        <blockquote>"This course gave me the confidence to switch careers into data science. The hands-on approach helped me build real-world skills that I now use every day." — Sarah, Data Analyst</blockquote>
+
+        <!-- Enroll Now Button -->
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdTAKn5cmDMLflZrV_CGeygEHzW773YzedVgduspT36qEh28Q/viewform?usp=sf_link" class="cta-btn">Enroll Now</a>
     </section>
 
@@ -46,5 +160,20 @@
             <p>© 2024 codaTeq. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Learn More button functionality
+        document.getElementById("learn-more-btn").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default behavior of link
+            var details = document.getElementById("instructor-details");
+            if (details.style.display === "none") {
+                details.style.display = "block"; // Show instructor details
+                this.innerHTML = "Show Less"; // Change button text
+            } else {
+                details.style.display = "none"; // Hide instructor details
+                this.innerHTML = "Learn More"; // Reset button text
+            }
+        });
+    </script>
 </body>
 </html>
