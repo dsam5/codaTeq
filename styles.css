@@ -157,13 +157,46 @@ footer .social a, footer .contact p {
     margin-right: 20px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    /* Hero section adjustment */
     .hero {
         flex-direction: column;
         text-align: center;
     }
+    
+    .hero-text h2 {
+        font-size: 32px;
+    }
+    
+    .cta-btn {
+        font-size: 1.2rem;
+    }
 
+    /* Key Offerings */
+    .key-offerings {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .key-offerings .offer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+    }
+
+    /* Stack items vertically */
     .key-offerings {
         flex-direction: column;
         align-items: center;
@@ -185,284 +218,40 @@ footer .social a, footer .contact p {
         text-align: center;
     }
 }
-/* About Page Hero */
-.about-hero {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 100px 20px;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #2c3e50;
-}
 
-/* Story and Mission Section */
-.story-mission {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-    background-color: #fff;
-}
+@media (max-width: 480px) {
+    /* Hero Section for small screens */
+    .hero {
+        padding: 30px;
+    }
 
-.story-content {
-    width: 60%;
-    padding-right: 30px;
-}
+    .hero-text h2 {
+        font-size: 24px;
+    }
 
-.story-image img {
-    width: 100%;
-    border-radius: 10px;
-}
+    .cta-btn {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
 
-/* Mission and Vision Section */
-.mission-vision {
-    background-color: #f8f9fa;
-    padding: 50px;
-    text-align: center;
-}
+    /* Course items stack */
+    .courses-list {
+        flex-direction: column;
+        padding: 10px;
+    }
 
-.mv-boxes {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-}
+    .course-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
-.mv-boxes .vision, .mv-boxes .mission {
-    width: 45%;
-    background-color: #fff;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-/* Team Section */
-.team {
-    padding: 50px;
-    text-align: center;
-}
+    /* Smaller font for mobile */
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
 
-.team h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-}
-
-.team-members {
-    display: flex;
-    justify-content: space-around; /* Updated for even spacing */
-    flex-wrap: wrap;
-}
-
-.member {
-    text-align: center;
-    margin: 0 20px;
-    width: 220px;
-}
-
-.member img {
-    width: 300px;
-    height: 320px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.member h4 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.member p {
-    color: #777;
-    margin-bottom: 20px;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-}
-
-.social-links a {
-    margin: 0 5px;
-}
-
-.social-links img {
-    width: 20px;  /* Reduced size for better appearance */
-    height: 20px;
-    transition: transform 0.3s ease;
-}
-
-.social-links img:hover {
-    transform: scale(1.2); /* Add hover effect for interaction */
-}
-
-/* Footer Section */
-footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-footer .newsletter {
-    margin-bottom: 20px;
-}
-
-footer .cta-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #27ae60;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-}
-/* Courses Hero Section */
-.courses-hero {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 100px 20px;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-/* Courses List Section */
-.courses-list {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-    background-color: #fff;
-}
-
-.course-item {
-    width: 30%;
-    background-color: #f8f9fa;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.course-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.course-item p {
-    margin-bottom: 20px;
-}
-
-.learn-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4a69bd;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* Call to Action Section */
-.cta-section {
-    background-color: #27ae60;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.cta-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.cta-section p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.cta-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #27ae60;
-    text-decoration: none;
-    border-radius: 5px;
-}
-/* Community Hero Section */
-.community-hero {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 100px 20px;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-/* Community Features Section */
-.community-features {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-    background-color: #fff;
-}
-
-.feature {
-    width: 30%;
-    background-color: #f8f9fa;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.feature h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.feature p {
-    margin-bottom: 20px;
-}
-/* Contact Hero Section */
-.contact-hero {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 100px 20px;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-/* Contact Form Section */
-.contact-form {
-    padding: 50px;
-    text-align: center;
-}
-
-.contact-form form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #f8f9fa;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 10px;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact-form button {
-    padding: 10px 20px;
-    background-color: #4a69bd;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #34495e;
+    /* Footer */
+    footer {
+        padding: 10px 0;
+    }
 }
