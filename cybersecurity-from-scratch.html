@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity: From Scratch to Intermediate - codaTeq</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Additional styling */
+        .instructor {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 30px 0;
+            gap: 20px;
+        }
+
+        .instructor img {
+            width: 350px;
+            height: 550px;
+            border-radius: 80%; /* Makes the image circular */
+            object-fit: contain;
+        }
+
+        .instructor-content {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e55039;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #d84315;
+        }
+
+        #instructor-details {
+            padding: 20px 0;
+            display: none; /* Hidden by default */
+            text-align: left;
+        }
+
+        blockquote {
+            font-style: italic;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-left: 5px solid #e55039;
+            margin: 20px 0;
+        }
+
+        /* Styling for larger screens */
+        @media (min-width: 768px) {
+            .instructor {
+                flex-direction: row;
+            }
+        }
+
+        /* Styling for smaller screens */
+        @media (max-width: 768px) {
+            .instructor {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta-btn {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="codaTeq Logo">
+            <h1>codaTeq</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Course Details Section -->
+    <section class="course-details">
+        <h1>Cybersecurity: From Scratch to Intermediate</h1>
+        <p>Master the essentials of cybersecurity, starting with foundational concepts and progressing to intermediate skills to safeguard systems and data effectively.</p>
+        
+        <h2>Requirements</h2>
+        <ul>
+            <li>Basic knowledge of computer systems</li>
+            <li>Access to a computer with internet</li>
+            <li>Eagerness to learn and apply cybersecurity principles</li>
+        </ul>
+         <!-- Instructor Section with Learn More Functionality -->
+         <h2>Meet Your Instructor</h2>
+         <div class="instructor">
+             <img src="team2.jpg" alt="David Kwesi  Sam">
+             <div class="instructor-content">
+                 <p><strong>David Kwesi Sam</strong> an experienced cybersecurity professional and educator, will guide you step by step through the foundations of cybersecurity. With a focus on hands-on learning, David ensures you gain the practical skills and knowledge needed to identify, mitigate, and prevent security threats. His expertise spans network security, ethical hacking, and incident response, providing a comprehensive foundation for those aiming to excel in the field. Under his guidance, you'll develop the confidence to tackle real-world challenges and advance to intermediate cybersecurity concepts.</p>
+                 <a href="#" id="learn-more-btn" class="cta-btn">Learn More</a>
+                 <div id="instructor-details">
+                    <p>David specializes in designing robust security architectures, performing penetration testing, and implementing advanced threat detection systems to safeguard critical infrastructures.</p>
+                    <p>Passionate about education and mentorship, David has empowered countless students to excel in cybersecurity, guiding them through complex topics like ethical hacking, network defense, and incident response. His commitment to staying ahead of emerging cyber threats ensures that learners are equipped with the latest skills to protect and innovate in the ever-evolving digital landscape.</p>
+                     <h3>Instructor Highlights</h3>
+                     <ul>
+                         <li>Dedicated to hands-on learning and mentorship</li>
+                     </ul>
+ 
+                     <!-- Contact Details -->
+                     <h3>Contact Details</h3>
+                     <p><strong>Email:</strong> samkwesidavid456@gmail.com</p>
+                     <p><strong>LinkedIn:</strong> <a href="http://linkedin.com/in/david-kwesi-sam">David Kwesi Sam</a></p>
+                     <p><strong>Phone:</strong> 0597707737 / 0536000409</p>
+                     <p><strong>Whatsapp:</strong> 0207132997</p>
+                 </div>
+             </div>
+         </div>
+ 
+         <!-- Testimonial Section -->
+         <h2>What People Say</h2> 
+         <blockquote>"David's hands-on approach made complex cybersecurity concepts easy to grasp. The practical exercises and real-world examples prepared me to handle real-life security challenges with confidence."</blockquote> <blockquote>"Learning from David was an incredible experience. His clear explanations and expertise in cybersecurity gave me the tools I needed to excel in network security and ethical hacking."</blockquote>
+         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdTAKn5cmDMLflZrV_CGeygEHzW773YzedVgduspT36qEh28Q/viewform?usp=sf_link" class="cta-btn">Enroll Now</a>
+        </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-info">
+            <p>© 2024 codaTeq. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Learn More button functionality
+        document.getElementById("learn-more-btn").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default behavior of link
+            var details = document.getElementById("instructor-details");
+            if (details.style.display === "none") {
+                details.style.display = "block"; // Show instructor details
+                this.innerHTML = "Show Less"; // Change button text
+            } else {
+                details.style.display = "none"; // Hide instructor details
+                this.innerHTML = "Learn More"; // Reset button text
+            }
+        });
+    </script>
+</body>
+</html>
